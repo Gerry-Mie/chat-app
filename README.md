@@ -1,7 +1,7 @@
 # how to run 
 
 * ## Back-end
-  create .eve file and the following
+  create .env file and the following
 
         MONGODB_URI
         JWT_SECRET
