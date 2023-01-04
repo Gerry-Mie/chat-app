@@ -9,6 +9,8 @@ const auth: RequestHandler = (req, res, next) => {
     const payload =  verifyToken(token)
     if (!payload) return  res.status(401).send('Please login')
 
+    // find user
+
     next()
 }
 

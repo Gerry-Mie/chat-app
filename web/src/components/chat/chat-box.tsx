@@ -128,8 +128,8 @@ const ChatBox = () => {
 
 
     return (
-        <Flex w="100%" bg="#e9e9e9" direction="column">
-            <Paper radius={0} p={10}>
+        <Box pt={50} pb={60}>
+            <Paper radius={0} p={10} pos='fixed' top={60} w='100%' left={0} pl={310} sx={{zIndex: 2}}>
                 <Title order={5}>{selectedContact.name}</Title>
             </Paper>
 
@@ -180,7 +180,7 @@ const ChatBox = () => {
                 }
             </Box>
             {/* compose message*/}
-            <Flex p={10}>
+            <Flex p={10} w='100%' bottom={0} pos='fixed' left={0} pl={310} sx={{zIndex: 2}}>
                 <TextInput
                     onKeyUp={(e) => e.key === 'Enter' && sendMessage()}
                     value={message}
@@ -188,7 +188,7 @@ const ChatBox = () => {
                     w="100%"/>
                 <Button onClick={sendMessage}>send</Button>
             </Flex>
-        </Flex>
+        </Box>
     );
 }
 
